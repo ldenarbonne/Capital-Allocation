@@ -1,0 +1,8 @@
+unit,risk_type,exposure,pd,lgd,asset_corr,n_obligors,volatility,tail_df,op_frequency,op_severity_mean,op_severity_cv,revenue,costs
+Corporate Lending,credit,12000,0.010,0.45,0.18,400,,,,,,420,150
+Retail Mortgages,credit,15000,0.006,0.20,0.15,5000,,,,,,300,110
+SME Lending,credit,4000,0.025,0.40,0.10,1500,,,,,,260,90
+Rates Trading,market,1500,,,,,0.04,6,,,,90,40
+Equity Derivatives,market,250,,,,,0.20,4,,,,110,50
+Retail Banking Ops,operational,,,,,,,,60,0.40,8,140,90
+Asset Management,operational,,,,,,,,15,1.00,6,95,45
