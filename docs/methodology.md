@@ -7,8 +7,13 @@ Each business unit *k* has a systemic risk driver $X_k \sim N(0,1)$; a high $X_k
 **Credit — one-factor Vasicek with finite granularity.** For a pool of $n$ equal obligors with
 exposure $EAD$, default probability $PD$, loss given default $LGD$ and asset correlation $\rho$:
 
-$$p(X) = \Phi\left(\frac{\Phi^{-1}(PD) + \sqrt{\rho}\,X}{\sqrt{1-\rho}}\right),\qquad
-D \mid X \sim \mathrm{Bin}(n, p(X)),\qquad L = D \cdot \frac{EAD}{n}\cdot LGD$$
+$$
+p(X) = \Phi\left(\frac{\Phi^{-1}(PD) + \sqrt{\rho}\,X}{\sqrt{1-\rho}}\right)
+$$
+
+$$
+D \mid X \sim \mathrm{Bin}(n, p(X)),\qquad L = D \cdot \frac{EAD}{n}\cdot LGD
+$$
 
 As $n \to \infty$, the 99.9% unexpected loss converges to the ASRF formula behind the Basel IRB approach
 (shown in the app as a benchmark).
@@ -30,7 +35,9 @@ simulation-based approach rather than a variance–covariance shortcut.
 
 ### 3. Economic capital
 
-$$EC = \rho_\alpha(T) - \mathbb{E}[T]\quad\text{(unexpected loss)}\qquad\text{or}\qquad EC = \rho_\alpha(T)$$
+$$
+EC = \rho_\alpha(T) - \mathbb{E}[T]\quad\text{(unexpected loss)}\qquad\text{or}\qquad EC = \rho_\alpha(T)
+$$
 
 with $\rho_\alpha$ = VaR or Expected Shortfall at confidence $\alpha$.
 
@@ -52,8 +59,13 @@ RAROC.
 
 ### 5. Performance
 
-$$\text{RAROC}_k = \frac{(\text{Revenue}_k - \text{Costs}_k - EL_k)(1-\tau) + r_c\,EC_k}{EC_k},\qquad
-\text{EVA}_k = \text{Net income}_k - h \cdot EC_k$$
+$$
+\text{RAROC}_k = \frac{(\text{Revenue}_k - \text{Costs}_k - EL_k)(1-\tau) + r_c\,EC_k}{EC_k}
+$$
+
+$$
+\text{EVA}_k = \text{Net income}_k - h \cdot EC_k
+$$
 
 A unit creates value when $\text{RAROC}_k \ge h$ (hurdle rate / cost of equity).
 
